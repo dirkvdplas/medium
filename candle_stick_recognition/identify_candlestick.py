@@ -18,11 +18,7 @@ def recognize_candlestick(df):
     candle_names = talib.get_function_groups()['Pattern Recognition']
 
     # patterns not found in the patternsite.com
-    exclude_items = ('CDLCOUNTERATTACK',
-                     'CDLLONGLINE',
-                     'CDLSHORTLINE',
-                     'CDLSTALLEDPATTERN',
-                     'CDLKICKINGBYLENGTH')
+    exclude_items = ('CDLSHORTLINE_Bear', 'CDLLONGLINE_Bull')
 
     candle_names = [candle for candle in candle_names if candle not in exclude_items]
 
